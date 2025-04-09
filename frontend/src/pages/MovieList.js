@@ -3,6 +3,7 @@ import { Container, Grid, Card, CardContent, CardMedia, Typography, Button, Box 
 import { useNavigate } from 'react-router-dom';
 import { useMovies } from '../context/MovieContext';
 
+// MovieList component for displaying available movies
 const MovieList = () => {
   const navigate = useNavigate();
   const { movies } = useMovies();
