@@ -234,7 +234,7 @@ const SeatSelection = () => {
             <Typography sx={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '1.8rem' }}>Available</Typography>
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <WeekendIcon sx={{ color: 'rgba(25, 118, 210, 0.9)', fontSize: '2.5rem' }} />
+            <WeekendIcon sx={{ color: 'rgba(8, 157, 33, 0.9)', fontSize: '2.5rem' }} />
             <Typography sx={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '1.8rem' }}>Selected</Typography>
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>

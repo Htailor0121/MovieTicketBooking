@@ -65,24 +65,24 @@ const BookingConfirmation = () => {
         backdropFilter: 'blur(8px)',
         borderRadius: '12px',
         border: '1px solid rgba(255, 255, 255, 0.2)',
-        p: 4,
+        p: 5,
       }}>
         {isConfirmed ? (
           <>
-            <CheckCircleIcon sx={{ fontSize: 64, color: '#4CAF50', mb: 2 }} />
-            <Typography variant="h4" sx={{ color: 'white', mb: 2 }}>
+            <CheckCircleIcon sx={{ fontSize: 100, color: '#4CAF50', mb: 3 }} />
+            <Typography variant="h2" sx={{ color: 'white', mb: 3, fontSize: '4rem' }}>
               Booking Confirmed!
             </Typography>
-            <Typography sx={{ color: 'rgba(255, 255, 255, 0.7)', mb: 3 }}>
+            <Typography variant="h5" sx={{ color: 'rgba(255, 255, 255, 0.7)', mb: 4, fontSize: '2.2rem' }}>
               Thank you for booking with us
             </Typography>
           </>
         ) : (
           <>
-            <Typography variant="h4" sx={{ color: 'white', mb: 2 }}>
+            <Typography variant="h2" sx={{ color: 'white', mb: 3, fontSize: '4rem' }}>
               Confirm Your Booking
             </Typography>
-            <Typography sx={{ color: 'rgba(255, 255, 255, 0.7)', mb: 3 }}>
+            <Typography variant="h5" sx={{ color: 'rgba(255, 255, 255, 0.7)', mb: 4, fontSize: '2.2rem' }}>
               Please review your booking details
             </Typography>
           </>
@@ -91,32 +91,32 @@ const BookingConfirmation = () => {
         <Box sx={{
           background: 'rgba(255, 255, 255, 0.05)',
           borderRadius: '8px',
-          p: 3,
-          mb: 3,
+          p: 4,
+          mb: 4,
         }}>
-          <Typography variant="h6" sx={{ color: 'white', mb: 2 }}>
+          <Typography variant="h3" sx={{ color: 'white', mb: 3, fontSize: '3.2rem' }}>
             {bookingDetails.movieTitle}
           </Typography>
-          <Typography sx={{ color: 'rgba(255, 255, 255, 0.7)', mb: 1 }}>
+          <Typography variant="h5" sx={{ color: 'rgba(255, 255, 255, 0.7)', mb: 2, fontSize: '2.2rem' }}>
             Selected Seats: {bookingDetails.selectedSeats.join(', ')}
           </Typography>
-          <Typography sx={{ color: 'rgba(255, 255, 255, 0.7)', mb: 1 }}>
+          <Typography variant="h5" sx={{ color: 'rgba(255, 255, 255, 0.7)', mb: 2, fontSize: '2.2rem' }}>
             Total Amount: ₹{bookingDetails.totalPrice}
           </Typography>
           {isConfirmed && (
-            <Typography sx={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+            <Typography variant="h5" sx={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '2.2rem' }}>
               Booking ID: {bookingId}
             </Typography>
           )}
         </Box>
 
         {error && (
-          <Typography sx={{ color: '#f44336', mb: 2 }}>
+          <Typography sx={{ color: '#f44336', mb: 3, fontSize: '2rem' }}>
             {error}
           </Typography>
         )}
 
-        <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center' }}>
+        <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center' }}>
           {!isConfirmed ? (
             <>
               <Button
@@ -128,10 +128,13 @@ const BookingConfirmation = () => {
                   '&:hover': {
                     bgcolor: 'rgba(76, 175, 80, 1)',
                   },
+                  fontSize: '2rem',
+                  padding: '16px 32px',
+                  minWidth: '200px',
                 }}
               >
                 {isProcessing ? (
-                  <CircularProgress size={24} sx={{ color: 'white' }} />
+                  <CircularProgress size={40} sx={{ color: 'white' }} />
                 ) : (
                   'Confirm Booking'
                 )}
@@ -146,6 +149,9 @@ const BookingConfirmation = () => {
                   '&:hover': {
                     borderColor: 'white',
                   },
+                  fontSize: '2rem',
+                  padding: '16px 32px',
+                  minWidth: '200px',
                 }}
               >
                 Cancel
@@ -161,6 +167,9 @@ const BookingConfirmation = () => {
                   '&:hover': {
                     bgcolor: 'rgba(76, 175, 80, 1)',
                   },
+                  fontSize: '2rem',
+                  padding: '16px 32px',
+                  minWidth: '200px',
                 }}
               >
                 View My Bookings
@@ -174,6 +183,9 @@ const BookingConfirmation = () => {
                   '&:hover': {
                     borderColor: 'white',
                   },
+                  fontSize: '2rem',
+                  padding: '16px 32px',
+                  minWidth: '200px',
                 }}
               >
                 Book Another Movie
